@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>carrey-parent</artifactId>
+        <groupId>com.carrey</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>carrey-manager-service</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <version>1.0-SNAPSHOT</version>
+    <!--集中管理版本号-->
+    <properties>
+        <carrey-common.version>1.0-SNAPSHOT</carrey-common.version>
+    </properties>
+    <!-- 添加依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>com.carrey</groupId>
+            <artifactId>carrey-common</artifactId>
+            <version>${carrey-common.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 添加tomcat插件，此处不用写版本号 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <!--不配置Tomcat7插件，也能运行。不过默认的端口是8080，path就是工程的名称-->
+                <configuration>
+                    <port>8080</port>
+                    <path>/</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <modules>
+        <module>carrey-entity</module>
+        <module>carrey-dao</module>
+        <module>carrey-service</module>
+    </modules>
+
+
+</project>

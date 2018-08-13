@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [13/Aug/2018:13:07:45 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [13/Aug/2018:13:07:50 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [13/Aug/2018:13:08:01 +0800] "GET /carrey-manager-controller HTTP/1.1" 302 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [13/Aug/2018:13:08:02 +0800] "GET /carrey-manager-controller/ HTTP/1.1" 200 52 http-bio-8080-exec-6 657
+0:0:0:0:0:0:0:1 - - [13/Aug/2018:13:08:02 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-7 0
